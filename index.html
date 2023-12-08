@@ -162,6 +162,12 @@
                 return a || b;
             } else if (operator == "NOT") {
                 return !a;
+	    } else if (operator == "NAND") {
+                return !(a && b);
+	    } else if (operator == "NOR") {
+                return !(a || b);
+	    } else if (operator == "XOR") {
+                return !(a || b);
             }
         }
 
@@ -185,6 +191,9 @@
 				<option value="AND">AND</option>
 				<option value="OR">OR</option>
 				<option value="NOT">NOT</option>
+				<option value="NAND">NAND</option>
+				<option value="NOR">NOR</option>
+				<option value="XOR">XOR</option>
 				</select><br>
 				<button onclick="calculate()" type="button" class="btn btn-info">hasil</button><br>
 				Hasil: <span id="result"></span>
